@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: __local_aars__:D.\workspace\taolesoft\ics_webrtc_android_samples\samples\src\sample\utils\libs\libwebrtc.jar:unspecified@jar">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/sample/utils/libs/libwebrtc.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

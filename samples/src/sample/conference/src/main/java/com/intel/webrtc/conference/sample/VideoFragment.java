@@ -46,7 +46,7 @@ import java.util.Map;
 public class VideoFragment extends Fragment {
 
     private VideoFragmentListener listener;
-    private SurfaceViewRenderer fullRenderer, smallRenderer;
+    private SurfaceViewRenderer fullRenderer, smallRenderer, smallRenderer2, smallRenderer3;
     private TextView statsInView, statsOutView;
     private float dX, dY;
     private BigInteger lastBytesSent = BigInteger.valueOf(0);
@@ -54,7 +54,7 @@ public class VideoFragment extends Fragment {
     private View.OnTouchListener touchListener = new View.OnTouchListener() {
         @Override
         public boolean onTouch(View v, MotionEvent event) {
-            if (v.getId() == R.id.small_renderer) {
+            if (v.getId() == R.id.small_renderer_1) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         dX = v.getX() - event.getRawX();
@@ -100,7 +100,9 @@ public class VideoFragment extends Fragment {
         statsOutView.setVisibility(View.GONE);
 
         fullRenderer = mView.findViewById(R.id.full_renderer);
-        smallRenderer = mView.findViewById(R.id.small_renderer);
+        smallRenderer = mView.findViewById(R.id.small_renderer_1);
+        smallRenderer2 = mView.findViewById(R.id.small_renderer_2);
+        smallRenderer3 = mView.findViewById(R.id.small_renderer_3);
 
         smallRenderer.init(((MainActivity) getActivity()).rootEglBase.getEglBaseContext(), null);
         smallRenderer.setMirror(true);
@@ -108,12 +110,23 @@ public class VideoFragment extends Fragment {
         smallRenderer.setEnableHardwareScaler(true);
         smallRenderer.setZOrderMediaOverlay(true);
 
+        smallRenderer2.init(((MainActivity) getActivity()).rootEglBase.getEglBaseContext(), null);
+        smallRenderer2.setMirror(true);
+        smallRenderer2.setEnableHardwareScaler(true);
+        smallRenderer2.setZOrderMediaOverlay(true);
+
+        smallRenderer3.init(((MainActivity) getActivity()).rootEglBase.getEglBaseContext(), null);
+        smallRenderer3.setMirror(true);
+        smallRenderer3.setEnableHardwareScaler(true);
+        smallRenderer3.setZOrderMediaOverlay(true);
+
         fullRenderer.init(((MainActivity) getActivity()).rootEglBase.getEglBaseContext(), null);
         fullRenderer.setScalingType(RendererCommon.ScalingType.SCALE_ASPECT_FIT);
+        fullRenderer.setMirror(true);
         fullRenderer.setEnableHardwareScaler(true);
         fullRenderer.setZOrderMediaOverlay(true);
 
-        listener.onRenderer(smallRenderer, fullRenderer);
+        listener.onRenderer(fullRenderer, smallRenderer, smallRenderer2, smallRenderer3);
         clearStats(true);
         clearStats(false);
         return mView;
@@ -199,6 +212,7 @@ public class VideoFragment extends Fragment {
     }
 
     public interface VideoFragmentListener {
-        void onRenderer(SurfaceViewRenderer localRenderer, SurfaceViewRenderer remoteRenderer);
+        void onRenderer(SurfaceViewRenderer localRenderer, SurfaceViewRenderer remoteRenderer,
+                        SurfaceViewRenderer remoteRenderer2, SurfaceViewRenderer remoteRenderer3);
     }
 }

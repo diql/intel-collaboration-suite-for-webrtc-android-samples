@@ -37,6 +37,9 @@ import android.widget.Button;
 import org.webrtc.RendererCommon;
 import org.webrtc.SurfaceViewRenderer;
 
+
+intel-collaboration-suite-for-webrtc-android-samples
+
 public class CallFragment extends Fragment implements View.OnClickListener {
 
     private static final String TAG = "ICS_P2P";

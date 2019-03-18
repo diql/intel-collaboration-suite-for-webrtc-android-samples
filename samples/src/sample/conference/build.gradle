@@ -29,5 +29,6 @@ dependencies {
         exclude group: 'org.json', module: 'json'
     }
     implementation project(':src:sample:utils')
-    
+    implementation project(':ics_base')
+    implementation project(':ics_conference')
 }

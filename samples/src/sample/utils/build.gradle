@@ -24,6 +24,6 @@ android {
 }
 
 dependencies {
-    
-    
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':ics_base')
 }

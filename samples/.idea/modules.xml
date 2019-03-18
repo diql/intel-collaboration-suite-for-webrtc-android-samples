@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/src/sample/conference/conference.iml" filepath="$PROJECT_DIR$/src/sample/conference/conference.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/sample/p2p/p2p.iml" filepath="$PROJECT_DIR$/src/sample/p2p/p2p.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/sample/sample.iml" filepath="$PROJECT_DIR$/src/sample/sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples.iml" filepath="$PROJECT_DIR$/samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/src.iml" filepath="$PROJECT_DIR$/src/src.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/sample/utils/utils.iml" filepath="$PROJECT_DIR$/src/sample/utils/utils.iml" />
+    </modules>
+  </component>
+</project>

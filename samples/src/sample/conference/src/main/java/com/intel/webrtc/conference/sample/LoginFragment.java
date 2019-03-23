@@ -49,7 +49,7 @@ public class LoginFragment extends Fragment {
             Bundle savedInstanceState) {
         View mView = inflater.inflate(R.layout.fragment_login, container, false);
         serverEditText = mView.findViewById(R.id.server_url);
-        serverEditText.setText("https://116.62.147.206:3004");
+        serverEditText.setText("https://47.93.6.226:3004");
         return mView;
     }
 

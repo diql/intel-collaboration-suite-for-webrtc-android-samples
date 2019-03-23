@@ -282,9 +282,7 @@ public class MainActivity extends AppCompatActivity
 
             executor.execute(() -> {
                 String serverUrl = loginFragment.getServerUrl();
-                String roomId = settingsFragment == null ? "" : settingsFragment.getRoomId();
-                roomId = "5c77549532f89841fec0e45c";
-                roomId = "5c7674c7dad43f069b800774";
+                String roomId = settingsFragment == null ? "5c948f2ba28cb17498f3de54" : settingsFragment.getRoomId();
 
                 JSONObject joinBody = new JSONObject();
                 try {

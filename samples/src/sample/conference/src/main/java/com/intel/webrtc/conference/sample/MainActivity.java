@@ -25,16 +25,6 @@
  */
 package com.intel.webrtc.conference.sample;
 
-import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-
-import static com.intel.webrtc.base.MediaCodecs.AudioCodec.AAC;
-import static com.intel.webrtc.base.MediaCodecs.AudioCodec.OPUS;
-import static com.intel.webrtc.base.MediaCodecs.AudioCodec.PCMU;
-import static com.intel.webrtc.base.MediaCodecs.VideoCodec.H264;
-import static com.intel.webrtc.base.MediaCodecs.VideoCodec.VP8;
-import static com.intel.webrtc.base.MediaConstraints.VideoTrackConstraints.CameraFacing.BACK;
-import static com.intel.webrtc.base.MediaConstraints.VideoTrackConstraints.CameraFacing.FRONT;
-
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -72,7 +62,6 @@ import com.intel.webrtc.conference.ConferenceInfo;
 import com.intel.webrtc.conference.Participant;
 import com.intel.webrtc.conference.Publication;
 import com.intel.webrtc.conference.PublishOptions;
-import com.intel.webrtc.conference.RemoteMixedStream;
 import com.intel.webrtc.conference.RemoteStream;
 import com.intel.webrtc.conference.SubscribeOptions;
 import com.intel.webrtc.conference.SubscribeOptions.AudioSubscriptionConstraints;
@@ -86,7 +75,6 @@ import org.json.JSONObject;
 import org.webrtc.EglBase;
 import org.webrtc.RTCStatsReport;
 import org.webrtc.SurfaceViewRenderer;
-import org.webrtc.VideoRenderer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,6 +82,15 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static com.intel.webrtc.base.MediaCodecs.AudioCodec.AAC;
+import static com.intel.webrtc.base.MediaCodecs.AudioCodec.OPUS;
+import static com.intel.webrtc.base.MediaCodecs.AudioCodec.PCMU;
+import static com.intel.webrtc.base.MediaCodecs.VideoCodec.H264;
+import static com.intel.webrtc.base.MediaCodecs.VideoCodec.VP8;
+import static com.intel.webrtc.base.MediaConstraints.VideoTrackConstraints.CameraFacing.BACK;
+import static com.intel.webrtc.base.MediaConstraints.VideoTrackConstraints.CameraFacing.FRONT;
 
 public class MainActivity extends AppCompatActivity
         implements VideoFragment.VideoFragmentListener,

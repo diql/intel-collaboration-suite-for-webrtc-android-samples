@@ -58,8 +58,6 @@ public class SettingsFragment extends Fragment implements RadioGroup.OnCheckedCh
 
         roomIdEditText = mView.findViewById(R.id.room_id);
 
-        roomIdEditText.setText("5c948f2ba28cb17498f3de54");
-
         return mView;
     }
 

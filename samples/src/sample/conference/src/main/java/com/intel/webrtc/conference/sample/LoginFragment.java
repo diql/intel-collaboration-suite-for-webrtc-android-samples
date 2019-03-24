@@ -36,6 +36,8 @@ import android.widget.EditText;
 public class LoginFragment extends Fragment {
     private EditText serverEditText;
 
+    private static final String DEFAULT_SERVER = "https://47.93.6.226:3004";
+
     public LoginFragment() {
     }
 
@@ -49,7 +51,7 @@ public class LoginFragment extends Fragment {
             Bundle savedInstanceState) {
         View mView = inflater.inflate(R.layout.fragment_login, container, false);
         serverEditText = mView.findViewById(R.id.server_url);
-        serverEditText.setText("https://47.93.6.226:3004");
+        serverEditText.setText(DEFAULT_SERVER);
         return mView;
     }
 

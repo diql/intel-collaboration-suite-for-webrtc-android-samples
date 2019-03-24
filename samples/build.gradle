@@ -12,10 +12,10 @@ buildscript {
         // in the individual module build.gradle files
     }
     ext {
-        compileSdkVersion = 26
+        compileSdkVersion = 28
         buildToolsVersion = "28.0.3"
         minSdkVersion = 16
-        targetSdkVersion = 26
+        targetSdkVersion = 27
         stackVersion = "18.09.1010"
     }
 }

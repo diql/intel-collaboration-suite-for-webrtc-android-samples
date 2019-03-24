@@ -6,11 +6,11 @@
       <module fileurl="file://$PROJECT_DIR$/ics_base/ics_base.iml" filepath="$PROJECT_DIR$/ics_base/ics_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics_conference/ics_conference.iml" filepath="$PROJECT_DIR$/ics_conference/ics_conference.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics_p2p/ics_p2p.iml" filepath="$PROJECT_DIR$/ics_p2p/ics_p2p.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ics_sample_utils/ics_sample_utils.iml" filepath="$PROJECT_DIR$/ics_sample_utils/ics_sample_utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/sample/p2p/p2p.iml" filepath="$PROJECT_DIR$/src/sample/p2p/p2p.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/sample/sample.iml" filepath="$PROJECT_DIR$/src/sample/sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples.iml" filepath="$PROJECT_DIR$/samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/src.iml" filepath="$PROJECT_DIR$/src/src.iml" />
-      <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
     </modules>
   </component>
 </project>

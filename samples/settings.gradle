@@ -1,3 +1,3 @@
 include ':src:sample:p2p', ':ics_base', ':ics_p2p', ':ics_conference'
-include ':conference'
+include ':ics_sample_conference'
 include ':ics_sample_utils'

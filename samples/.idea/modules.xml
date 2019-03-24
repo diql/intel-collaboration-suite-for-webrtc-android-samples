@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/conference/conference.iml" filepath="$PROJECT_DIR$/conference/conference.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics_base/ics_base.iml" filepath="$PROJECT_DIR$/ics_base/ics_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics_conference/ics_conference.iml" filepath="$PROJECT_DIR$/ics_conference/ics_conference.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics_p2p/ics_p2p.iml" filepath="$PROJECT_DIR$/ics_p2p/ics_p2p.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ics_sample_conference/ics_sample_conference.iml" filepath="$PROJECT_DIR$/ics_sample_conference/ics_sample_conference.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics_sample_utils/ics_sample_utils.iml" filepath="$PROJECT_DIR$/ics_sample_utils/ics_sample_utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/sample/p2p/p2p.iml" filepath="$PROJECT_DIR$/src/sample/p2p/p2p.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/sample/sample.iml" filepath="$PROJECT_DIR$/src/sample/sample.iml" />

@@ -23,7 +23,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.intel.webrtc.conference.sample;
+package com.intel.webrtc.sample.utils;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -51,11 +51,11 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
-public final class HttpUtils {
-    static SSLContext sslContext;
-    static HostnameVerifier hostnameVerifier;
+public final class IcsHttpUtils {
+    private static SSLContext sslContext;
+    private static HostnameVerifier hostnameVerifier;
 
-    static void setUpINSECURESSLContext() {
+    public static void setUpINSECURESSLContext() {
         hostnameVerifier = new HostnameVerifier() {
             @Override
             public boolean verify(String hostname, SSLSession session) {
@@ -88,7 +88,7 @@ public final class HttpUtils {
         }
     }
 
-    static void setUpSelfsignedSSLContext(File caFile) {
+    public static void setUpSelfsignedSSLContext(File caFile) {
         InputStream caInput;
         try {
             CertificateFactory cf = CertificateFactory.getInstance("X.509");
@@ -117,7 +117,7 @@ public final class HttpUtils {
         }
     }
 
-    static String request(String uri, String method, String body, boolean isSecure) {
+    public static String request(String uri, String method, String body, boolean isSecure) {
         StringBuilder response = new StringBuilder("");
         URL url;
         HttpURLConnection httpURLConnection = null;
@@ -169,5 +169,25 @@ public final class HttpUtils {
         }
 
         return response.toString();
+    }
+
+    public static SSLContext getSslContext() {
+        return sslContext;
+    }
+
+    public static HostnameVerifier getHostnameVerifier() {
+        return hostnameVerifier;
+    }
+
+    private static final String DEFAULT_SERVER = "https://47.93.6.226:3004";
+
+    public static String getServerUrl() {
+        return DEFAULT_SERVER;
+    }
+
+    private static final String ROOM_ID = "5c948f2ba28cb17498f3de54";
+
+    public static String getRoomId() {
+        return ROOM_ID;
     }
 }

@@ -67,6 +67,7 @@ import com.intel.webrtc.conference.SubscribeOptions;
 import com.intel.webrtc.conference.SubscribeOptions.AudioSubscriptionConstraints;
 import com.intel.webrtc.conference.SubscribeOptions.VideoSubscriptionConstraints;
 import com.intel.webrtc.conference.Subscription;
+import com.intel.webrtc.sample.utils.IcsHttpUtils;
 import com.intel.webrtc.sample.utils.IcsScreenCapturer;
 
 import org.json.JSONArray;
@@ -244,7 +245,7 @@ public class MainActivity extends AppCompatActivity
                             String uri = serverUrl
                                     + "/rooms/" + conferenceInfo.id()
                                     + "/streams/" + result.id();
-                            HttpUtils.request(uri, "PATCH", mixBody.toString(), true);
+                            IcsHttpUtils.request(uri, "PATCH", mixBody.toString(), true);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -291,7 +292,7 @@ public class MainActivity extends AppCompatActivity
                 }
 
                 String uri = serverUrl + "/createToken/";
-                String token = HttpUtils.request(uri, "POST", joinBody.toString(), true);
+                String token = IcsHttpUtils.request(uri, "POST", joinBody.toString(), true);
 
                 conferenceClient.join(token, new ActionCallback<ConferenceInfo>() {
                     @Override
@@ -403,11 +404,11 @@ public class MainActivity extends AppCompatActivity
             contextHasInitialized = true;
         }
 
-        HttpUtils.setUpINSECURESSLContext();
+        IcsHttpUtils.setUpINSECURESSLContext();
         ConferenceClientConfiguration configuration
                 = ConferenceClientConfiguration.builder()
-                .setHostnameVerifier(HttpUtils.hostnameVerifier)
-                .setSSLContext(HttpUtils.sslContext)
+                .setHostnameVerifier(IcsHttpUtils.getHostnameVerifier())
+                .setSSLContext(IcsHttpUtils.getSslContext())
                 .build();
         conferenceClient = new ConferenceClient(configuration);
         conferenceClient.addObserver(this);

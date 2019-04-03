@@ -37,6 +37,11 @@
 
         </LinearLayout>
 
+        <com.intel.webrtc.conference.sample.BeautySurfaceViewRenderer
+            android:id="@+id/full_renderer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
 
         <org.webrtc.SurfaceViewRenderer
             android:id="@+id/small_renderer_1"
@@ -58,12 +63,6 @@
             android:layout_height="160dp"
             android:layout_gravity="right"
             android:layout_marginTop="370dp" />
-
-        <org.webrtc.SurfaceViewRenderer
-            android:id="@+id/full_renderer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
 
     </FrameLayout>
 
